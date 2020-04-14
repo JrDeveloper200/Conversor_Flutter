@@ -90,6 +90,9 @@ class _HomeState extends State<Home> {
           title: Text("\$ Conversor \$"),
           backgroundColor: Colors.amber,
           centerTitle: true,
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.refresh), onPressed: _clearAll),
+          ],
         ),
         body: FutureBuilder<Map>(
             future: getData(),
